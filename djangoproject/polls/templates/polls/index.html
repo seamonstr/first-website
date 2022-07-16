@@ -1,0 +1,14 @@
+<head>
+
+</head>
+<body>
+{% if latest_questions %}
+<ul>
+    {% for i in latest_questions %}
+    <li><a href="/polls/{{i.id}}/">{{i.question_text}}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No recent questions.</p>
+{% endif %}
+</body>
